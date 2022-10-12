@@ -1,0 +1,80 @@
+.decorated-item
+    &__header
+        background-color #EEEEEE
+        padding-top 4px
+        padding-bottom 4px
+        font-size 14px
+        color black
+        padding-left 30px
+        padding-right 30px
+
+    &__info
+        padding-left 0
+        list-style none
+        {ibm}
+
+        li
+            {ibm}
+            position relative
+
+            &:not(:last-child)
+                margin-right 50px
+
+                &:before
+                    content ''
+                    position absolute
+                    right -27px
+                    top 50%
+                    transform translateY(-50%)
+                    width 7px
+                    height 7px
+                    border-radius 50%
+                    background-color grey
+
+    &__btns
+        float right
+        padding-top 10px
+
+        button
+            border none
+            background-color transparent
+            width 25px
+            height 25px
+            background-position center
+            background-size contain
+            background-repeat no-repeat
+            cursor pointer
+
+            &:not(:last-child)
+                margin-right 20px
+
+    &__download-btn
+        background-image inline('download-btn.svg')
+
+    &__edit-btn
+        background-image inline('edit-btn.svg')
+
+    &__delete-btn
+        background-image inline('delete-btn.svg')
+
+    &__content
+        padding 17px 30px
+        border-bottom 1px solid #EEEEEE
+
+    &__column
+        font-size 14px
+        {ibt}
+        width 25%
+
+    &__column-title
+        font-weight 700
+        margin-bottom 9px
+        color black
+
+    &__text
+        p
+            margin-top 0
+            color rgba(0, 0, 0, 0.7)
+
+            &:not(:last-child)
+                margin-bottom 5px

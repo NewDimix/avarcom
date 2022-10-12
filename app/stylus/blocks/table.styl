@@ -1,0 +1,66 @@
+.table
+    width 100%
+    font-size 14px
+    border-collapse collapse
+
+    thead
+        color rgba(0, 0, 0, 0.7)
+
+        td
+            padding-top 15px
+            padding-bottom 15px
+
+    tbody
+        color black
+
+        td
+            padding-top 30px
+            padding-bottom 30px
+
+    tr
+        border-bottom 1px solid #eee
+
+    td:first-child
+        padding-left 30px
+
+    &__call-btn
+        {ibm}
+        height 31px
+        border none
+        background-color #6FCF97
+        border-radius 3px
+        color white
+        width 101px
+        cursor pointer
+
+    &__btn
+        {ibm}
+        height 31px
+        border none
+        background-color #F2F2F2
+        border-radius 3px
+        color black
+        width 101px
+        cursor pointer
+
+        &.active
+            background-color #6FCF97
+            color white
+
+    &__gps-btn, &__edit-btn
+        {ibm}
+        width 43px
+        height 31px
+        border none
+        border-radius 3px
+        background-repeat no-repeat
+        background-position center
+        cursor pointer
+
+    &__gps-btn
+        background-color #56CCF2
+        background-image inline('gps.svg')
+
+    &__edit-btn
+        background-color #F2F2F2
+        background-image inline('edit.svg')

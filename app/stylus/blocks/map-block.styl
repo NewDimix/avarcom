@@ -1,0 +1,57 @@
+.map-block
+    &__map
+        width 100%
+        height calc(100vh - 80px - 75px)
+        min-height 500px
+        position relative
+
+        iframe
+            position absolute
+            left 0
+            top 0
+            width 100%
+            height 100%
+
+    &__explanations
+        height 70px
+        background-color #fff
+
+        li
+            {ibm}
+            color black
+            font-size 13px
+            padding-top 30px
+            padding-bottom 30px
+            padding-left 35px
+            position relative
+
+            &:before
+                content ''
+                position absolute
+                left 0
+                top 50%
+                transform translateY(-50%)
+                width 32px
+                height 32px
+                background-position center
+                background-size contain
+                background-repeat no-repeat
+
+            &:not(:last-child)
+                margin-right 75px
+
+    &__user
+        &:before
+            background-image inline('car-black-map.png')
+
+    &__commissar
+        &:before
+            background-image inline('car-red-map.png')
+
+    &__victim
+        &:before
+            background-image inline('user-map.svg')
+
+    &__crash
+        &:before
+            background-image inline('location-map.svg')

@@ -1,0 +1,69 @@
+<div class="content-right__map-block map-block tab" id="tab1">
+    <div class="content-right__header">
+        <div class="content-right__title">
+            <h2>Карта</h2>
+        </div>
+
+        <div class="content-right__btn">
+            <button>Город: Омск</button>
+        </div>
+    </div>
+
+    <div class="map-block__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d534.3218510760126!2d-73.98518069559472!3d40.74924803877222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1524009699385" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div class="map-block__explanations">
+        <ul>
+            <li class="map-block__user">Пользователь</li>
+            <li class="map-block__commissar">Комиссар</li>
+            <li class="map-block__victim">Потерпевший</li>
+            <li class="map-block__crash">Место ДТП</li>
+        </ul>
+
+        <button data-remodal-target="message" style="font-size: 20px">Сообщение</button>
+    </div>
+
+    <div class="remodal-bg">
+        <div class="remodal remodal_message" data-remodal-id="message">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="remodal__header">
+                <span>Новое происшествие</span>
+            </div>
+
+            <div class="remodal__info">
+                <ul>
+                    <li>Петров Петя Петрович</li>
+                    <li>+7 (132) 123-12-12</li>
+                    <li>24.07.2018</li>
+                    <li>Омск</li>
+                </ul>
+            </div>
+
+            <form action="#" class="remodal__form remodal-form">
+                <div class="remodal-form__row">
+                    <div class="remodal-form__address-wrap">
+                        <div class="remodal-form__address">
+                            <p>5-я Кордная 87</p>
+                        </div>
+
+                        <button class="remodal-form__map-btn">Посмотреть на карте</button>
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_1">
+                    <div class="remodal-form__item">
+                        <label for="comment">Комментарий</label>
+                        <textarea name="comment" id="comment"></textarea>
+                    </div>
+                </div>
+
+                <div class="remodal-form__row">
+                    <button class="remodal-form__call-btn">Позвонить</button>
+                    <button class="remodal-form__accept-btn">Принять</button>
+                    <button class="remodal-form__reject-btn">Отклонить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

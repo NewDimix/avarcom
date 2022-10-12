@@ -1,0 +1,140 @@
+.remodal-form
+    padding-left 20px
+    padding-right 20px
+    font-size 0
+
+    &__row
+        &:not(:last-child)
+            margin-bottom 22px
+
+        &_1
+            .remodal-form__item
+                width 100%
+
+        &_2
+            .remodal-form__item
+                width 48%
+
+                &:nth-child(2n-1)
+                    margin-right 4%
+
+        &_3
+            .remodal-form__item
+                width 30%
+
+                &:not(:last-child)
+                    margin-right 5%
+
+    &__item
+        {ibm}
+        text-align center
+
+        label
+            display block
+            text-align left
+            font-size 14px
+            margin-bottom 7px
+
+        input, select, textarea
+            width 100%
+            font-size 14px
+            height 46px
+            background-color #fff
+            border 1px solid #EEEEEE
+            padding-left 20px
+            padding-right 20px
+            transition all .15s ease
+
+            &:focus
+                outline none
+                border 1px solid #6FCF97
+
+        textarea
+            height 148px
+            resize none
+            padding-top 10px
+            padding-bottom 10px
+
+    &__address-wrap
+        border 1px solid #EEEEEE
+        font-size 24px
+        padding 10px 22px
+        text-align left
+
+    &__address
+        {ibm}
+
+    &__map-btn
+        float right
+        background-color #F2F2F2
+        border-radius 3px
+        border none
+        font-size 13px
+        height 34px
+        width 154px
+        cursor pointer
+
+    &__photo-btn
+        {ibm}
+        font-size 14px
+        color white
+        border-radius 3px
+        height 52px
+        background-color #2D9CDB
+        border none
+        width 188px
+        cursor pointer
+        margin-right 16px
+
+        &:focus
+            outline none
+
+    &__call-btn
+        width 31%
+        margin-right 3.5%
+        font-size 18px
+        color white
+        height 56px
+        border-radius 3px
+        border none
+        background-color #2F80ED
+        cursor pointer
+
+    &__accept-btn
+        width 31%
+        margin-right 3.5%
+        font-size 18px
+        color white
+        height 56px
+        border-radius 3px
+        border none
+        background-color #6FCF97
+        cursor pointer
+
+    &__reject-btn
+        width 31%
+        font-size 18px
+        color white
+        height 56px
+        border-radius 3px
+        border none
+        background-color #EB5757
+        cursor pointer
+
+    input[type=submit]
+        {ibm}
+        font-size 14px
+        color white
+        border-radius 3px
+        height 52px
+        background-color #6FCF97
+        border none
+        width 144px
+        cursor pointer
+
+        &:focus
+            outline none
+
+    input[type=file]
+        border none
+        padding-left 0

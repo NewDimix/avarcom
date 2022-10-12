@@ -1,0 +1,86 @@
+.menu
+    text-align left
+
+    &__ul
+        padding-left 0
+
+    &__link
+        font-family Roboto
+        text-align left
+        background none
+        width 100%
+        border none
+        color #868686
+        padding-top 20px
+        padding-bottom 20px
+        position relative
+        padding-left 63px
+        transition all .2s ease
+        cursor pointer
+
+        &:before
+            content ''
+            width 25px
+            height 25px
+            position absolute
+            left 28px
+            top 50%
+            transform translateY(-50%)
+            background-position center
+            background-size contain
+            background-repeat no-repeat
+            opacity .5
+            transition all .2s ease
+
+        &:focus
+            outline none
+
+        &_map
+            &:before
+                background-image inline('map.svg')
+
+        &_request
+            &:before
+                background-image inline('request.svg')
+
+        &_user
+            &:before
+                background-image inline('user.svg')
+
+        &_car
+            &:before
+                background-image inline('car.svg')
+
+        &_statistic
+            &:before
+                background-image inline('statistic.svg')
+
+        &_settings
+            &:before
+                background-image inline('settings.svg')
+
+        &.active
+            color white
+
+            &:before
+                opacity 1
+
+        &>span
+            position relative
+            {ibm}
+
+    li
+        display block
+
+    &__count
+        display block
+        position absolute
+        right -18px
+        top -5px
+        font-size 11px
+        width 16px
+        line-height 16px
+        text-align center
+        background-color #F2C94C
+        border-radius 50%
+        color black

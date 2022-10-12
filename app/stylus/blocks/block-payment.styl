@@ -1,0 +1,157 @@
+.block-payment
+    text-align center
+
+    @media (min-width 768px)
+        text-align left
+
+    &__title
+        position relative
+        margin-bottom 38px
+        font-size-func(16)
+        text-align left
+        hyphens()
+
+    &__crypto-wrap
+        padding-left 0
+
+        input
+            position absolute
+            opacity 0
+
+            & + label
+                cursor pointer
+                transition all .3s ease
+                hyphens()
+
+            &:checked + label
+                background-color $green-color
+
+                .block-payment__crypto-text
+                    color white
+
+                .block-payment__crypto-name
+                    color white
+
+                &:hover
+                    background-color $green-color
+
+            &:focus + label
+                background-color $green-color
+                box-shadow 0 0 0 2px white, 0 0 0 4px $green-color
+
+            &:hover + label
+                background-color rgba(118, 187, 67, 0.3)
+
+    &__crypto-item
+        {ibt}
+        width 31.36%
+        margin-right 2.96%
+        margin-bottom 20px
+        border 1px solid $grey-light-color
+        text-align center
+        padding-bottom 17px
+
+        @media (min-width 1050px)
+            width 15.83%
+            margin-right 1%
+            margin-bottom 0
+
+        @media (min-width 1265px)
+            width 15%
+            margin-right 2%
+
+        &:nth-of-type(3)
+            margin-right 0
+
+            @media (min-width 1050px)
+                margin-right 1%
+
+            @media (min-width 1265px)
+                margin-right 2%
+
+        &:last-of-type
+            margin-right 0
+
+        &_ltc
+            background-image url(../img/ltc.png)
+
+    &__img-wrap
+        position relative
+        height 110px
+
+    &__img
+        position absolute
+        left 50%
+        top 50%
+        transform translate(-50%, -50%)
+        background-image url(../img/sprite-crypt.png)
+
+        &_dash
+            background-position -93px -188px
+            width 72px
+            height 73px
+
+        &_card
+            background-position -115px -93px
+            width 73px
+            height 73px
+
+        &_dollar
+            background-position -208px 0px
+            width 73px
+            height 73px
+
+        &_euro
+            background-position -208px -93px
+            width 73px
+            height 73px
+
+        &_waves
+            background-position 0px -188px
+            width 73px
+            height 73px
+
+        &_btc
+            background-position -115px 0px
+            width 73px
+            height 73px
+
+        &_bch
+            background-position 0px 0px
+            width 95px
+            height 72px
+
+        &_eth
+            background-position -301px 0px
+            width 49px
+            height 77px
+
+        &_ltc
+            background-position 0px -92px
+            width 76px
+            height 76px
+
+    &__crypto-text
+        font-size-func(14)
+        margin-bottom 5px
+        transition all .2s ease
+        ellipsis()
+
+        @media (min-width 768px)
+            font-size-func(16)
+
+    &__crypto-name
+        font-size-func(14)
+        text-transform uppercase
+        color $green-color
+        font-weight 700
+        transition all .2s ease
+        ellipsis()
+
+        @media (min-width 768px)
+            font-size-func(16)
+
+    &__btn
+        text-align center
+        min-width 205px
+        max-width 100%

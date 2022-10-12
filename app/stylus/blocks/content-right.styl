@@ -1,0 +1,49 @@
+.content-right
+    font-size 0
+
+    @media (min-width 768px)
+        padding-left 260px
+
+    &__settings-block, &__request-block, &__users-block, &__statictic-block
+        display none
+
+    &__header
+        height 80px
+        background-color white
+        text-align right
+        padding-left 28px
+        padding-right 28px
+        border-bottom 1px solid #e0e0e0
+        box-shadow 3px 0 10px 0 rgba(0, 0, 0, 0.2)
+        position relative
+
+    &__title
+        float left
+        color black
+
+        h2
+            font-size 30px
+            line-height 80px
+            margin-top 0
+            margin-bottom 0
+            font-weight 400
+
+    &__btn
+        line-height 87px
+
+        button
+            font-size 14px
+            background none
+            border 2px solid black
+            border-radius 5px
+            height 40px
+            width 130px
+            font-family Roboto
+            font-weight 700
+            transition all .2s ease
+            cursor pointer
+
+            &:hover
+                border-color #004180
+                background-color #004180
+                color white

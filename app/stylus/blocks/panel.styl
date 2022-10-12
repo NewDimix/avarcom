@@ -1,0 +1,422 @@
+.panel
+    {ibm}
+    text-align right
+
+    &__language
+        {ibm}
+        position relative
+        background none
+        border none
+        transition all .1s ease
+        font-size-func(14)
+        hyphens()
+        font-family GothamPro, arial, verdana, sans-serif
+
+        @media (min-width 768px)
+            font-size-func(16)
+
+        &:after
+            content ''
+            position absolute
+            right 11px
+            transform translateY(-50%)
+            border 4px solid transparent
+            transition all .2s ease
+
+        &:focus
+            outline none
+
+        &_open
+            border-bottom-left-radius 0
+            border-bottom-right-radius 0
+
+        .panel__menu
+            text-transform uppercase
+
+    &__language-btn
+        font-size-func(14)
+        text-transform uppercase
+        font-weight 700
+        transition all .1s ease
+
+        @media (min-width 768px)
+            font-size-func(16)
+
+        &:hover
+            cursor pointer
+
+    &__login
+        {ibm}
+        text-transform uppercase
+        color white
+        text-decoration none
+        font-weight 700
+        font-size-func(14)
+        padding 8px 10px
+        min-width 125px
+        max-width 125px
+        text-align center
+        border 2px solid white
+        border-radius 100px
+        transition all .1s ease
+        background none
+        ellipsis()
+
+        @media (min-width 480px)
+            max-width 200px
+
+        @media (min-width 768px)
+            font-size-func(16)
+            min-width 191px
+            max-width 400px
+            padding-top 16px
+            padding-bottom 16px
+
+        @media (min-width 992px)
+            max-width 650px
+
+        @media (min-width 1265px)
+            max-width 800px
+
+        &:focus
+            outline none
+            background-color rgba(255, 255, 255, 0.3)
+
+        &:hover
+            color $dark-color
+            background-color white
+            cursor pointer
+
+        &:active
+            transform scale(.95)
+
+        &:last-child
+            margin-top 20px
+            max-width none
+
+            @media (min-width 1265px)
+                margin-bottom 60px
+
+    &__sign-up
+        background none
+        border none
+        color white
+        font-size-func(14)
+        padding 8px 10px
+        font-family GothamPro, arial, verdana, sans-serif
+        font-weight 700
+
+        @media (min-width 768px)
+            font-size-func(16)
+
+    &__user
+        {ibm}
+        position relative
+        background none
+        border none
+        transition all .1s ease
+        font-family GothamPro, arial, verdana, sans-serif
+        font-weight 700
+
+        &:after
+            content ''
+            position absolute
+            right 16px
+            top 50%
+            transform translateY(-50%)
+            border 4px solid transparent
+            transition all .2s ease
+
+        &:hover
+            cursor pointer
+
+        &:focus
+            outline none
+
+    &__nickname
+        {ibm}
+        font-size-func(14)
+        margin-right 18px
+        color white
+        transition all .1s ease
+        overflow hidden
+        ellipsis()
+
+        @media (min-width 768px)
+            font-size-func(16)
+
+    &__avatar
+        {ibm}
+        width 33px
+        height 33px
+        border-radius 50%
+
+        img
+            border-radius 50%
+
+    &__menu
+        display none
+        width 100%
+        text-align left
+        position absolute
+        left 0
+        top 100%
+        margin-top 0
+        padding-left 0
+        list-style none
+        font-size-func(24)
+        transition all .1s ease
+
+        a
+            display block
+
+    &_light
+        .panel
+            &__language
+                border-radius 5px
+                margin-right 5px
+
+                @media (min-width 480px)
+                    margin-right 10px
+
+                &:after
+                    border-top-color rgba(255, 255, 255, 0.6)
+                    right 5px
+                    top 55%
+
+                    @media (min-width 480px)
+                        right 11px
+
+                &:hover
+                    background-color white
+
+                    &:after
+                        border-top-color $dark-color
+
+                    .panel__language-btn
+                        color $dark-color
+
+                &:focus
+                    box-shadow inset 0 0 0 2px white
+
+                &_open
+                    background-color white
+                    border-radius 5px
+                    border-bottom-left-radius 0
+                    border-bottom-right-radius 0
+
+                    &:after
+                        border-top-color $dark-color
+                        transform rotate(180deg)
+                        top 35%
+
+                    .panel__language-btn
+                        color $dark-color
+
+            &__language-btn
+                color white
+                padding 14px 10px 14px 0px
+
+                @media (min-width 480px)
+                    padding 14px 20px 14px 10px
+
+            &__user
+                border-radius 5px
+                padding 7px 20px 7px 5px
+
+                @media (min-width 480px)
+                    padding 7px 40px 7px 20px
+
+                &:after
+                    right 6px
+                    border-top-color rgba(255, 255, 255, 0.6)
+
+                    @media (min-width 480px)
+                        right 16px
+
+                &:hover
+                    background-color white
+
+                    &:after
+                        border-top-color $dark-color
+
+                    .panel__nickname
+                        color $dark-color
+
+                &:focus
+                    box-shadow inset 0 0 0 2px white
+
+                &_open
+                    background-color white
+                    border-radius 5px
+                    border-bottom-left-radius 0
+                    border-bottom-right-radius 0
+
+                    &:after
+                        border-top-color $dark-color
+                        transform rotate(180deg)
+                        top 33%
+
+                    .panel__nickname
+                        color $dark-color
+
+            &__nickname
+                margin-right 5px
+
+                @media (min-width 480px)
+                    margin-right 18px
+
+                p
+                    max-width 70px
+
+                    @media (min-width 480px)
+                        max-width 155px
+
+                    @media (min-width 768px)
+                        max-width 140px
+
+            &__menu
+                background-color white
+                font-size-func(14)
+                border-top 1px solid rgba(61, 83, 100, 0.2)
+                border-bottom-left-radius 5px
+                border-bottom-right-radius 5px
+                box-shadow 0 3px 20px 0px rgba(0, 0, 0, 0.2)
+
+                @media (min-width 768px)
+                    font-size-func(16)
+
+                li
+                    &:last-child
+                        border-bottom-left-radius 5px
+                        border-bottom-right-radius 5px
+
+                    &:hover
+                        background-color rgb(237, 244, 231)
+
+                a
+                    text-align center
+                    padding-top 10px
+                    padding-bottom 10px
+                    text-decoration none
+                    color $dark-color
+                    font-weight 700
+
+                    &:focus
+                        outline none
+                        background-color rgb(237, 244, 231)
+
+            &__nickname
+                color white
+
+    &_dark
+        .panel
+            &__language
+                margin-right 1px
+
+                &:after
+                    border-top-color rgba(61, 83, 100, 0.6)
+                    top 50%
+
+                &:before
+                    content ''
+                    width 1px
+                    background-color #f0f0f0
+                    height 68px
+                    position absolute
+                    right -1px
+
+                &:hover, &:focus
+                    background-color $green-color
+
+                    &:after
+                        border-top-color white
+
+                    .panel__language-btn
+                        color white
+
+                &_open
+                    background-color $green-color
+
+                    &:after
+                        border-top-color white
+                        transform rotate(180deg)
+                        top 38%
+
+                    .panel__language-btn
+                        color white
+
+            &__language-btn
+                color $dark-color
+                padding 24px 20px 25px 10px
+
+                p
+                    max-width 40px
+
+            &__user
+                padding 18px 40px 18px 20px
+                border-bottom-right-radius 5px
+
+                &:after
+                    border-top-color rgba(61, 83, 100, 0.6)
+
+                &:hover, &:focus
+                    background-color $green-color
+
+                    &:after
+                        border-top-color white
+
+                    .panel__nickname
+                        color white
+
+                &_open
+                    background-color $green-color
+                    border-bottom-right-radius 0
+
+                    &:after
+                        border-top-color white
+                        transform rotate(180deg)
+                        top 38%
+
+                    .panel__nickname
+                        color white
+
+            &__nickname
+                color $dark-color
+
+                p
+                    max-width 250px
+
+                    @media (min-width 768px)
+                        max-width 350px
+
+            &__menu
+                background-color $green-color
+                font-size-func(14)
+                font-weight 700
+                border-top 1px solid #f0f0f0
+                border-bottom-left-radius 5px
+                border-bottom-right-radius 5px
+                box-shadow 0 3px 25px 0px rgba(0, 0, 0, 0.2)
+
+                @media (min-width 768px)
+                    font-size-func(16)
+
+                li
+                    border-bottom-left-radius 5px
+                    border-bottom-right-radius 5px
+
+                    &:hover
+                        background-color lighten($green-color, 10%)
+
+                a
+                    text-align center
+                    padding-top 10px
+                    padding-bottom 10px
+                    text-decoration none
+                    color $dark-color
+                    color white
+
+                    &:focus
+                        outline none
+                        background-color lighten($green-color, 20%)

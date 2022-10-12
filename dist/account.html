@@ -1,0 +1,1332 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>AVARCOM</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/vendor.min.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+
+    <body class="body_one-page">
+
+<div class="loader js-loader">
+    <img class="loader__img" src="img/loader.gif" alt="Loading...">
+</div>
+
+
+<main class="main main_account">
+    <div class="main__nav-left nav-left js-nav-left">
+        <div class="nav-left__logo">
+            <h1>Avarcom</h1>
+        </div>
+<div class="main__menu menu js-account-menu">
+    <nav>
+        <ul class="menu__ul">
+            <li>
+                <button class="menu__link menu__link_map active js-buy-btn" data-href="#tab1" tabindex="1" title="Карта">
+                    <span>Карта</span>
+                </button>
+            </li>
+            <li>
+                <button class="menu__link menu__link_request" data-href="#tab2" tabindex="2" title="Заявки">
+                    <span>Заявки<span class="menu__count">3</span></span>
+                </button>
+            </li>
+            <li>
+                <button class="menu__link menu__link_request" data-href="#tab7" tabindex="3" title="Оформленные">
+                    <span>Оформленные</span>
+                </button>
+            </li>
+            <li>
+                <button class="menu__link menu__link_user" data-href="#tab3" tabindex="4" title="Пользователи">
+                    <span>Пользователи</span>
+                </button>
+            </li>
+            <li>
+                <button class="menu__link menu__link_car" data-href="#tab4" tabindex="5" title="Комиссары">
+                    <span>Комиссары</span>
+                </button>
+            </li>
+            <li>
+                <button class="menu__link menu__link_statistic" data-href="#tab5" tabindex="6" title="Статистика">
+                    <span>Статистика</span>
+                </button>
+            </li>
+            <li>
+                <button class="menu__link menu__link_settings" data-href="#tab6" tabindex="7" title="Настройки">
+                    <span>Настройки</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+    </div>
+
+    <div class="main__content-right content-right">
+<div class="content-right__map-block map-block tab" id="tab1">
+    <div class="content-right__header">
+        <div class="content-right__title">
+            <h2>Карта</h2>
+        </div>
+
+        <div class="content-right__btn">
+            <button>Город: Омск</button>
+        </div>
+    </div>
+
+    <div class="map-block__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d534.3218510760126!2d-73.98518069559472!3d40.74924803877222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1524009699385" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div class="map-block__explanations">
+        <ul>
+            <li class="map-block__user">Пользователь</li>
+            <li class="map-block__commissar">Комиссар</li>
+            <li class="map-block__victim">Потерпевший</li>
+            <li class="map-block__crash">Место ДТП</li>
+        </ul>
+
+        <button data-remodal-target="message" style="font-size: 20px">Сообщение</button>
+    </div>
+
+    <div class="remodal-bg">
+        <div class="remodal remodal_message" data-remodal-id="message">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="remodal__header">
+                <span>Новое происшествие</span>
+            </div>
+
+            <div class="remodal__info">
+                <ul>
+                    <li>Петров Петя Петрович</li>
+                    <li>+7 (132) 123-12-12</li>
+                    <li>24.07.2018</li>
+                    <li>Омск</li>
+                </ul>
+            </div>
+
+            <form action="#" class="remodal__form remodal-form">
+                <div class="remodal-form__row">
+                    <div class="remodal-form__address-wrap">
+                        <div class="remodal-form__address">
+                            <p>5-я Кордная 87</p>
+                        </div>
+
+                        <button class="remodal-form__map-btn">Посмотреть на карте</button>
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_1">
+                    <div class="remodal-form__item">
+                        <label for="comment">Комментарий</label>
+                        <textarea name="comment" id="comment"></textarea>
+                    </div>
+                </div>
+
+                <div class="remodal-form__row">
+                    <button class="remodal-form__call-btn">Позвонить</button>
+                    <button class="remodal-form__accept-btn">Принять</button>
+                    <button class="remodal-form__reject-btn">Отклонить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="content-right__users-block users-block tab" id="tab2">
+    <div class="content-right__header">
+        <div class="content-right__title">
+            <h2>Заявки</h2>
+        </div>
+
+<!--
+        <div class="content-right__btn">
+            <button>Добавить</button>
+        </div>
+-->
+    </div>
+
+    <form action="#" class="users-block__form users-form">
+        <div class="users-form__filter">
+            <button class="active">Все</button>
+            <button>ДТП</button>
+            <button>Помощь</button>
+        </div>
+
+        <div class="users-form__city">
+            <span>Город:</span>
+            <select name="#" id="#">
+                <option value="Omsk">Омск</option>
+                <option value="Moscow">Москва</option>
+            </select>
+        </div>
+
+        <div class="users-form__search">
+            <input type="text">
+            <button>Поиск</button>
+        </div>
+    </form>
+
+    <table class="users-block__table table">
+        <thead>
+            <tr>
+                <td>Тип</td>
+                <td>ФИО</td>
+                <td>Сотовый</td>
+                <td>Город & Адрес</td>
+                <td>Дата</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ДТП</td>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>ул. Пушкина, д. Колотушкина</td>
+                <td>14.03.2018 15:30</td>
+                <td>
+                    <button class="table__call-btn">Позвонить</button>
+<!--                    <button class="table__gps-btn"></button>-->
+                    <button class="table__edit-btn" data-remodal-target="edit-request"></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Помощь</td>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>ул. Пушкина, д. Колотушкина</td>
+                <td>14.03.2018 15:30</td>
+                <td>
+                    <button class="table__call-btn">Позвонить</button>
+<!--                    <button class="table__gps-btn"></button>-->
+                    <button class="table__edit-btn" data-remodal-target="edit-request"></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Помощь</td>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>ул. Пушкина, д. Колотушкина</td>
+                <td>14.03.2018 15:30</td>
+                <td>
+                    <button class="table__call-btn">Позвонить</button>
+<!--                    <button class="table__gps-btn"></button>-->
+                    <button class="table__edit-btn" data-remodal-target="edit-request"></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="remodal-bg">
+        <div class="remodal" data-remodal-id="edit-request">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="remodal__header">
+                <span>Изменить заявку</span>
+            </div>
+
+            <form action="#" class="remodal__form remodal-form">
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="address">Адрес</label>
+                        <input id="address" type="text" name="address">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="name">ФИО</label>
+                        <input id="name" type="text" name="name">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="city">Город</label>
+                        <select name="city" id="city">
+                            <option value="Omsk">Омск</option>
+                            <option value="Moscow">Москва</option>
+                        </select>
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="phone">Телефон</label>
+                        <input id="phone" type="number" name="phone">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="date">Дата</label>
+                        <input id="date" type="date" name="date">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="type">Тип происшествия</label>
+                        <select name="type" id="type">
+                            <option value="crash">ДТП</option>
+                            <option value="help">Помощь</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="remodal-form__row">
+                    <input type="submit" value="Создать">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="content-right__decorated-block decorated-block tab" id="tab7">
+    <div class="content-right__header">
+        <div class="content-right__title">
+            <h2>Оформленные</h2>
+        </div>
+
+        <form action="#" class="statictic-block__form statictic-form">
+            <div class="statictic-form__period">
+                <span>Период с:</span>
+                <input type="date">
+            </div>
+
+            <div class="statictic-form__period">
+                <span>По:</span>
+                <input type="date">
+            </div>
+
+            <div class="statictic-form__btn">
+                <input type="submit" value="Применить">
+            </div>
+        </form>
+    </div>
+
+    <form action="#" class="decorated-block__form decorated-form">
+        <div class="decorated-form__city">
+            <span>Город:</span>
+            <select name="#" id="#">
+                <option value="Omsk">Омск</option>
+                <option value="Moscow">Москва</option>
+            </select>
+        </div>
+
+        <div class="decorated-form__search">
+            <input type="text">
+            <button>Поиск</button>
+        </div>
+
+        <div class="decorated-form__status">
+            <span>Статус:</span>
+            <select name="#" id="#">
+                <option value="end">Завершено</option>
+                <option value="start">Не завершено</option>
+            </select>
+        </div>
+    </form>
+
+    <div class="decorated-block__item decorated-item">
+        <div class="decorated-item__header">
+            <ul class="decorated-item__info">
+                <li>Заявка: №123456</li>
+                <li>Город: Омск</li>
+                <li>Оплата: 2000 руб.</li>
+                <li>Клиент: Нет</li>
+                <li>Статус: Завершено</li>
+            </ul>
+
+            <div class="decorated-item__btns">
+                <button class="decorated-item__download-btn"></button>
+                <button class="decorated-item__edit-btn" data-remodal-target="edit-decorated"></button>
+                <button class="decorated-item__delete-btn"></button>
+            </div>
+        </div>
+
+        <div class="decorated-item__content">
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Комиссар</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Горбунов А. В.</p>
+                    <p>+7 (913) 500-40-20</p>
+                    <p>Кировский</p>
+                </div>
+            </div>
+
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Потерпевший</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Горбунов А. В.</p>
+                    <p>+7 (913) 500-40-20</p>
+                    <p>Количество оформления: 15</p>
+                </div>
+            </div>
+
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Транспорт</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Марка: bmw</p>
+                    <p>Модель: x6</p>
+                    <p>Номер: у443кк</p>
+                </div>
+            </div>
+
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Происшествие</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Оформление: европротокол</p>
+                    <p>Дата: 20.03.1996 15:20</p>
+                    <p>Место: <a href="#">Посмотреть на карте</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="decorated-block__item decorated-item">
+        <div class="decorated-item__header">
+            <ul class="decorated-item__info">
+                <li>Заявка: №123456</li>
+                <li>Город: Омск</li>
+                <li>Оплата: 2000 руб.</li>
+                <li>Клиент: Нет</li>
+                <li>Статус: Завершено</li>
+            </ul>
+
+            <div class="decorated-item__btns">
+                <button class="decorated-item__download-btn"></button>
+                <button class="decorated-item__edit-btn" data-remodal-target="edit-decorated"></button>
+                <button class="decorated-item__delete-btn"></button>
+            </div>
+        </div>
+
+        <div class="decorated-item__content">
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Комиссар</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Горбунов А. В.</p>
+                    <p>+7 (913) 500-40-20</p>
+                    <p>Кировский</p>
+                </div>
+            </div>
+
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Потерпевший</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Горбунов А. В.</p>
+                    <p>+7 (913) 500-40-20</p>
+                    <p>Количество оформления: 15</p>
+                </div>
+            </div>
+
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Транспорт</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Марка: bmw</p>
+                    <p>Модель: x6</p>
+                    <p>Номер: у443кк</p>
+                </div>
+            </div>
+
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Происшествие</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Оформление: европротокол</p>
+                    <p>Дата: 20.03.1996 15:20</p>
+                    <p>Место: <a href="#">Посмотреть на карте</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="decorated-block__item decorated-item">
+        <div class="decorated-item__header">
+            <ul class="decorated-item__info">
+                <li>Заявка: №123456</li>
+                <li>Город: Омск</li>
+                <li>Оплата: 2000 руб.</li>
+                <li>Клиент: Нет</li>
+                <li>Статус: Завершено</li>
+            </ul>
+
+            <div class="decorated-item__btns">
+                <button class="decorated-item__download-btn"></button>
+                <button class="decorated-item__edit-btn" data-remodal-target="edit-decorated"></button>
+                <button class="decorated-item__delete-btn"></button>
+            </div>
+        </div>
+
+        <div class="decorated-item__content">
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Комиссар</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Горбунов А. В.</p>
+                    <p>+7 (913) 500-40-20</p>
+                    <p>Кировский</p>
+                </div>
+            </div>
+
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Потерпевший</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Горбунов А. В.</p>
+                    <p>+7 (913) 500-40-20</p>
+                    <p>Количество оформления: 15</p>
+                </div>
+            </div>
+
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Транспорт</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Марка: bmw</p>
+                    <p>Модель: x6</p>
+                    <p>Номер: у443кк</p>
+                </div>
+            </div>
+
+            <div class="decorated-item__column">
+                <div class="decorated-item__column-title">
+                    <span>Происшествие</span>
+                </div>
+
+                <div class="decorated-item__text">
+                    <p>Оформление: европротокол</p>
+                    <p>Дата: 20.03.1996 15:20</p>
+                    <p>Место: <a href="#">Посмотреть на карте</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="remodal-bg">
+        <div class="remodal remodal_decor" data-remodal-id="edit-decorated">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="remodal__header">
+                <span>Редактировать</span>
+            </div>
+
+            <div class="remodal__info">
+                <ul>
+                    <li>#123456</li>
+                    <li>Петров Петя Петрович</li>
+                    <li>+7 (132) 123-12-12</li>
+                    <li>Омск</li>
+                    <li>Кировский р-н</li>
+                </ul>
+            </div>
+
+            <form action="#" class="remodal__form remodal-form">
+                <div class="remodal-form__row remodal-form__row_3">
+                    <div class="remodal-form__item">
+                        <label for="name">ФИО</label>
+                        <input id="name" type="text" name="name">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="mark">Марка</label>
+                        <input id="mark" type="text" name="mark">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="decor">Оформление</label>
+                        <select name="decor" id="decor">
+                            <option value="euro1">Европротокол</option>
+                            <option value="euro2">Европротокол 2</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_3">
+                    <div class="remodal-form__item">
+                        <label for="phone">Телефон</label>
+                        <input id="phone" type="number" name="phone">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="model">Модель</label>
+                        <input id="model" type="text" name="model">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="date">Дата</label>
+                        <input id="date" type="date" name="date">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_3">
+                    <div class="remodal-form__item">
+                        <label for="city">Город</label>
+                        <select name="city" id="city">
+                            <option value="Omsk">Омск</option>
+                            <option value="Moscow">Москва</option>
+                        </select>
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="number">Номер</label>
+                        <input id="number" type="text" name="number">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="place">Место ДТП</label>
+                        <input id="place" type="text" name="place">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row">
+                    <button class="remodal-form__photo-btn">Скачать фото ДТП</button>
+                    <input type="submit" value="Изменить">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="content-right__users-block users-block tab" id="tab3">
+    <div class="content-right__header">
+        <div class="content-right__title">
+            <h2>Пользователи</h2>
+        </div>
+
+        <div class="content-right__btn">
+            <button data-remodal-target="add-user">Добавить</button>
+        </div>
+    </div>
+
+    <form action="#" class="users-block__form users-form">
+        <div class="users-form__filter">
+            <button class="active">Все</button>
+            <button>Онлайн</button>
+            <button>Офлайн</button>
+        </div>
+
+        <div class="users-form__city">
+            <span>Город:</span>
+            <select name="#" id="#">
+                <option value="Omsk">Омск</option>
+                <option value="Moscow">Москва</option>
+            </select>
+        </div>
+
+        <div class="users-form__search">
+            <input type="text">
+            <button>Поиск</button>
+        </div>
+    </form>
+
+    <table class="users-block__table table">
+        <thead>
+            <tr>
+                <td>Имя</td>
+                <td>Сотовый</td>
+                <td>Дата рег.</td>
+                <td>Город</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>24.07.2018</td>
+                <td>Омск</td>
+                <td>
+                    <button class="table__call-btn">Позвонить</button>
+                    <button class="table__gps-btn" data-remodal-target="gps"></button>
+                    <button class="table__edit-btn"></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>24.07.2018</td>
+                <td>Омск</td>
+                <td>
+                    <button class="table__call-btn">Позвонить</button>
+                    <button class="table__gps-btn" data-remodal-target="gps"></button>
+                    <button class="table__edit-btn"></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>24.07.2018</td>
+                <td>Омск</td>
+                <td>
+                    <button class="table__call-btn">Позвонить</button>
+                    <button class="table__gps-btn" data-remodal-target="gps"></button>
+                    <button class="table__edit-btn"></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="remodal-bg">
+        <div class="remodal remodal_map" data-remodal-id="gps">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="remodal__header">
+                <span>Пользователь на карте</span>
+            </div>
+
+            <div class="remodal__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d534.3218510760126!2d-73.98518069559472!3d40.74924803877222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1524009699385" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="remodal-bg">
+        <div class="remodal" data-remodal-id="add-user">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="remodal__header">
+                <span>Добавить пользователя</span>
+            </div>
+
+            <form action="#" class="remodal__form remodal-form">
+                <div class="remodal-form__row remodal-form__row_1">
+                    <div class="remodal-form__item">
+                        <label for="name">Имя</label>
+                        <input id="name" type="text" name="name">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="email">Электронная почта</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="phone">Телефон</label>
+                        <input id="phone" type="number" name="phone">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_1">
+                    <div class="remodal-form__item">
+                        <label for="password">Пароль</label>
+                        <input id="password" type="password" name="password">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row  remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="city">Город</label>
+                        <select name="city" id="city">
+                            <option value="omsk">Омск</option>
+                            <option value="moscow">Москва</option>
+                        </select>
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="avatar">Аватар</label>
+                        <input type="file" id="avatar">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row">
+                    <input type="submit" value="Создать">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="content-right__users-block users-block tab" id="tab4">
+    <div class="content-right__header">
+        <div class="content-right__title">
+            <h2>Комиссары</h2>
+        </div>
+
+        <div class="content-right__btn">
+            <button data-remodal-target="add-commissar">Добавить</button>
+        </div>
+    </div>
+
+    <form action="#" class="users-block__form users-form">
+        <div class="users-form__filter">
+            <button class="active">Все</button>
+            <button>Работают</button>
+            <button>Отключены</button>
+        </div>
+
+        <div class="users-form__city">
+            <span>Город:</span>
+            <select name="#" id="#">
+                <option value="Omsk">Омск</option>
+                <option value="Moscow">Москва</option>
+            </select>
+        </div>
+
+        <div class="users-form__search">
+            <input type="text">
+            <button>Поиск</button>
+        </div>
+    </form>
+
+    <table class="users-block__table table">
+        <thead>
+            <tr>
+                <td>Номер</td>
+                <td>Имя</td>
+                <td>Сотовый</td>
+                <td>Город</td>
+                <td>Район</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#3453345</td>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>Омск</td>
+                <td>Кировский</td>
+                <td>
+                    <button class="table__btn">Отключить</button>
+                    <button class="table__gps-btn" data-remodal-target="radius"></button>
+                    <button class="table__edit-btn"></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>#3453345</td>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>Омск</td>
+                <td>Центральный</td>
+                <td>
+                    <button class="table__btn active">Включить</button>
+                    <button class="table__gps-btn" data-remodal-target="radius"></button>
+                    <button class="table__edit-btn"></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>#3453345</td>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>Омск</td>
+                <td>Кировский</td>
+                <td>
+                    <button class="table__btn">Отключить</button>
+                    <button class="table__gps-btn" data-remodal-target="radius"></button>
+                    <button class="table__edit-btn"></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="remodal-bg">
+        <div class="remodal remodal_map" data-remodal-id="radius">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="remodal__header">
+                <span>Изменить радиус комиссара</span>
+            </div>
+
+            <div class="remodal__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d534.3218510760126!2d-73.98518069559472!3d40.74924803877222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1524009699385" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                <button class="remodal__edit">Изменить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="remodal-bg">
+        <div class="remodal" data-remodal-id="add-commissar">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="remodal__header">
+                <span>Добавить комиссара</span>
+            </div>
+
+            <form action="#" class="remodal__form remodal-form">
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="number">Номер комиссара</label>
+                        <input id="number" type="number" name="number">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="name">ФИО</label>
+                        <input id="name" type="text" name="name">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="email">Электронная почта</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="phone">Телефон</label>
+                        <input id="phone" type="number" name="phone">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="password">Пароль</label>
+                        <input id="password" type="password" name="password">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="avatar">Аватар</label>
+                        <input type="file" id="avatar">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row  remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="city">Город</label>
+                        <select name="city" id="city">
+                            <option value="omsk">Омск</option>
+                            <option value="moscow">Москва</option>
+                        </select>
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="region">Район</label>
+                        <select name="region" id="region">
+                            <option value="kir">Кировский</option>
+                            <option value="center">Центральный</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="remodal-form__row">
+                    <input type="submit" value="Создать">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="content-right__statictic-block statictic-block tab" id="tab5">
+    <div class="content-right__header">
+        <div class="content-right__title">
+            <h2>Статистика</h2>
+        </div>
+
+        <form action="#" class="statictic-block__form statictic-form">
+            <div class="statictic-form__period">
+                <span>Период с:</span>
+                <input type="date">
+            </div>
+
+            <div class="statictic-form__period">
+                <span>По:</span>
+                <input type="date">
+            </div>
+
+            <div class="statictic-form__btn">
+                <input type="submit" value="Применить">
+            </div>
+        </form>
+    </div>
+
+    <table class="statictic-block__table">
+        <thead>
+            <tr>
+                <td></td>
+                <td>По дате</td>
+                <td>По дате</td>
+                <td>По дате</td>
+                <td>Год</td>
+                <td>Всё время</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Общее количество оформлений</td>
+                <td>0</td>
+                <td>2000</td>
+                <td>10500</td>
+                <td>130000</td>
+                <td>303 500</td>
+            </tr>
+
+            <tr>
+                <td>Количество оформлений по карте</td>
+                <td>0</td>
+                <td>2000</td>
+                <td>10500</td>
+                <td>130000</td>
+                <td>303 500</td>
+            </tr>
+
+            <tr>
+                <td>По сертификату</td>
+                <td>0</td>
+                <td>2000</td>
+                <td>10500</td>
+                <td>130000</td>
+                <td>303 500</td>
+            </tr>
+
+            <tr>
+                <td>Юридическое лицо</td>
+                <td>0</td>
+                <td>2000</td>
+                <td>10500</td>
+                <td>130000</td>
+                <td>303 500</td>
+            </tr>
+
+            <tr>
+                <td>Европротокол (2000)</td>
+                <td>0</td>
+                <td>2000</td>
+                <td>10500</td>
+                <td>130000</td>
+                <td>303 500</td>
+            </tr>
+
+            <tr>
+                <td>Схема 2.6 (1500)</td>
+                <td>0</td>
+                <td>2000</td>
+                <td>10500</td>
+                <td>130000</td>
+                <td>303 500</td>
+            </tr>
+
+            <tr>
+                <td>Отказов</td>
+                <td>0</td>
+                <td>2000</td>
+                <td>10500</td>
+                <td>130000</td>
+                <td>303 500</td>
+            </tr>
+
+            <tr>
+                <td>Среднее время реагирования</td>
+                <td>0</td>
+                <td>2000</td>
+                <td>10500</td>
+                <td>130000</td>
+                <td>303 500</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="content-right__settings-block settings-block tab js-settings-page" id="tab6">
+    <div class="content-right__header">
+        <div class="content-right__title">
+            <h2>Настройки</h2>
+        </div>
+
+        <div class="content-right__btn">
+            <button>Выйти</button>
+        </div>
+    </div>
+
+    <div class="settings-block__profile">
+        <div class="settings-block__bg"></div>
+
+        <div class="settings-block__photo">
+            <img src="img/photo.jpg" alt="">
+        </div>
+
+        <div class="settings-block__user">
+            <div class="settings-block__name">
+                <span>Артем</span>
+            </div>
+
+            <div class="settings-block__post">
+                <span>Администратор</span>
+            </div>
+        </div>
+
+        <a href="#" class="settings-block__edit">Изменить профиль</a>
+    </div>
+
+    <div class="settings-block__groups groups-users">
+        <div class="groups-users__title">
+            <h3>Группы</h3>
+        </div>
+
+        <ul class="groups-users__list">
+            <li class="groups-users__item">
+                <div class="groups-users__text">
+                    <span>Администратор</span>
+                </div>
+
+                <div class="groups-users__count">3</div>
+
+                <button class="groups-users__btn active js-btn-admins">Посмотреть</button>
+            </li>
+
+            <li class="groups-users__item">
+                <div class="groups-users__text">
+                    <span>Главный комиссар</span>
+                </div>
+
+                <div class="groups-users__count">3</div>
+
+                <button class="groups-users__btn js-btn-commissars" disabled>Посмотреть</button>
+            </li>
+
+            <li class="groups-users__item">
+                <div class="groups-users__text">
+                    <span>Диспетчер</span>
+                </div>
+
+                <div class="groups-users__count">3</div>
+
+                <button class="groups-users__btn js-btn-dispatchers" disabled>Посмотреть</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="settings-block__statistic settings-statistic">
+        <div class="settings-statistic__title">
+            <h3>Статистика принятых Вами заказов</h3>
+        </div>
+
+        <div class="settings-statistic__items-wrap">
+            <div class="settings-statistic__item">
+                <span class="settings-statistic__count">3000</span>
+
+                <span class="settings-statistic__text">За сегодня</span>
+            </div>
+
+            <div class="settings-statistic__item">
+                <span class="settings-statistic__count">13000</span>
+
+                <span class="settings-statistic__text">За неделю</span>
+            </div>
+
+            <div class="settings-statistic__item">
+                <span class="settings-statistic__count">27000</span>
+
+                <span class="settings-statistic__text">За месяц</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-right__settings-block settings-block js-settings-table">
+    <div class="content-right__header">
+        <div class="content-right__title">
+            <h2>Управление персоналом</h2>
+        </div>
+
+        <div class="content-right__btn">
+            <button class="js-btn-back">Назад</button>
+        </div>
+    </div>
+
+    <table class="settings-block__table table js-table-admins">
+        <tr>
+            <td>Фамилия Имя Отчество</td>
+            <td>+987654321</td>
+            <td>Омск</td>
+            <td>Администратор</td>
+            <td>
+                <button class="table__edit-btn" data-remodal-target="edit-settings"></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Фамилия Имя Отчество</td>
+            <td>+987654321</td>
+            <td>Омск</td>
+            <td>Администратор</td>
+            <td>
+                <button class="table__edit-btn" data-remodal-target="edit-settings"></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Фамилия Имя Отчество</td>
+            <td>+987654321</td>
+            <td>Омск</td>
+            <td>Администратор</td>
+            <td>
+                <button class="table__edit-btn" data-remodal-target="edit-settings"></button>
+            </td>
+        </tr>
+    </table>
+
+    <table class="settings-block__table table js-table-commissars">
+        <tr>
+            <td>Фамилия Имя Отчество</td>
+            <td>+987654321</td>
+            <td>Омск</td>
+            <td>Комиссар</td>
+            <td>
+                <button class="table__edit-btn" data-remodal-target="edit-settings"></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Фамилия Имя Отчество</td>
+            <td>+987654321</td>
+            <td>Омск</td>
+            <td>Комиссар</td>
+            <td>
+                <button class="table__edit-btn" data-remodal-target="edit-settings"></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Фамилия Имя Отчество</td>
+            <td>+987654321</td>
+            <td>Омск</td>
+            <td>Комиссар</td>
+            <td>
+                <button class="table__edit-btn" data-remodal-target="edit-settings"></button>
+            </td>
+        </tr>
+    </table>
+
+    <table class="settings-block__table table js-table-dispatchers">
+        <tr>
+            <td>Фамилия Имя Отчество</td>
+            <td>+987654321</td>
+            <td>Омск</td>
+            <td>Диспетчер</td>
+            <td>
+                <button class="table__edit-btn" data-remodal-target="edit-settings"></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Фамилия Имя Отчество</td>
+            <td>+987654321</td>
+            <td>Омск</td>
+            <td>Диспетчер</td>
+            <td>
+                <button class="table__edit-btn" data-remodal-target="edit-settings"></button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Фамилия Имя Отчество</td>
+            <td>+987654321</td>
+            <td>Омск</td>
+            <td>Диспетчер</td>
+            <td>
+                <button class="table__edit-btn" data-remodal-target="edit-settings"></button>
+            </td>
+        </tr>
+    </table>
+
+    <div class="remodal-bg">
+        <div class="remodal" data-remodal-id="edit-settings">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="remodal__header">
+                <span>Редактировать</span>
+            </div>
+
+            <form action="#" class="remodal__form remodal-form">
+
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="id">ID</label>
+                        <input id="id" type="text" name="id">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="name">ФИО</label>
+                        <input id="name" type="text" name="name">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="city">Город</label>
+                        <select name="city" id="city">
+                            <option value="Omsk">Омск</option>
+                            <option value="Moscow">Москва</option>
+                        </select>
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="phone">Телефон</label>
+                        <input id="phone" type="number" name="phone">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="group">Группа</label>
+                        <select name="group" id="group">
+                            <option value="admins">Администратор</option>
+                            <option value="commissars">Комиссар</option>
+                            <option value="dispatchers">Диспетчер</option>
+                        </select>
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="avatar">Аватар</label>
+                        <input type="file" id="avatar">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_1">
+                    <div class="remodal-form__item remodal-form__item_password">
+                        <label for="password">Пароль</label>
+                        <input id="password" type="password" name="password">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row">
+                    <input type="submit" value="Изменить">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    </div>
+</main>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.js"></script>
+
+    </body>
+</html>
+

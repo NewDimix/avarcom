@@ -1,0 +1,144 @@
+<div class="content-right__users-block users-block tab" id="tab2">
+    <div class="content-right__header">
+        <div class="content-right__title">
+            <h2>Заявки</h2>
+        </div>
+
+<!--
+        <div class="content-right__btn">
+            <button>Добавить</button>
+        </div>
+-->
+    </div>
+
+    <form action="#" class="users-block__form users-form">
+        <div class="users-form__filter">
+            <button class="active">Все</button>
+            <button>ДТП</button>
+            <button>Помощь</button>
+        </div>
+
+        <div class="users-form__city">
+            <span>Город:</span>
+            <select name="#" id="#">
+                <option value="Omsk">Омск</option>
+                <option value="Moscow">Москва</option>
+            </select>
+        </div>
+
+        <div class="users-form__search">
+            <input type="text">
+            <button>Поиск</button>
+        </div>
+    </form>
+
+    <table class="users-block__table table">
+        <thead>
+            <tr>
+                <td>Тип</td>
+                <td>ФИО</td>
+                <td>Сотовый</td>
+                <td>Город & Адрес</td>
+                <td>Дата</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ДТП</td>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>ул. Пушкина, д. Колотушкина</td>
+                <td>14.03.2018 15:30</td>
+                <td>
+                    <button class="table__call-btn">Позвонить</button>
+<!--                    <button class="table__gps-btn"></button>-->
+                    <button class="table__edit-btn" data-remodal-target="edit-request"></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Помощь</td>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>ул. Пушкина, д. Колотушкина</td>
+                <td>14.03.2018 15:30</td>
+                <td>
+                    <button class="table__call-btn">Позвонить</button>
+<!--                    <button class="table__gps-btn"></button>-->
+                    <button class="table__edit-btn" data-remodal-target="edit-request"></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Помощь</td>
+                <td>Александр</td>
+                <td>+7 (913) 500-40-20</td>
+                <td>ул. Пушкина, д. Колотушкина</td>
+                <td>14.03.2018 15:30</td>
+                <td>
+                    <button class="table__call-btn">Позвонить</button>
+<!--                    <button class="table__gps-btn"></button>-->
+                    <button class="table__edit-btn" data-remodal-target="edit-request"></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="remodal-bg">
+        <div class="remodal" data-remodal-id="edit-request">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="remodal__header">
+                <span>Изменить заявку</span>
+            </div>
+
+            <form action="#" class="remodal__form remodal-form">
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="address">Адрес</label>
+                        <input id="address" type="text" name="address">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="name">ФИО</label>
+                        <input id="name" type="text" name="name">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="city">Город</label>
+                        <select name="city" id="city">
+                            <option value="Omsk">Омск</option>
+                            <option value="Moscow">Москва</option>
+                        </select>
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="phone">Телефон</label>
+                        <input id="phone" type="number" name="phone">
+                    </div>
+                </div>
+
+                <div class="remodal-form__row remodal-form__row_2">
+                    <div class="remodal-form__item">
+                        <label for="date">Дата</label>
+                        <input id="date" type="date" name="date">
+                    </div>
+
+                    <div class="remodal-form__item">
+                        <label for="type">Тип происшествия</label>
+                        <select name="type" id="type">
+                            <option value="crash">ДТП</option>
+                            <option value="help">Помощь</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="remodal-form__row">
+                    <input type="submit" value="Создать">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
